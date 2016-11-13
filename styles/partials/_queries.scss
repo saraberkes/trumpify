@@ -1,0 +1,203 @@
+$stupidphone: 350px;
+$smartphone: 480px;
+$outputMobile:590px;
+$tabletPortrait: 822px;
+$tabletLandscape: 1024px;
+$desktop: 1174px;
+$largeScreen: 1400px;
+@media all and (max-width:$desktop){
+}
+@media all and (max-width:$tabletPortrait){
+	header{
+		h1{
+			font-size:12rem;
+			line-height: 10rem;
+		}
+		h2{
+			font-size:3rem;
+			// line-height: 3.4rem;
+		}
+		blockquote{
+			font-size:3rem;
+		}
+		img{
+			width:500px;
+		}
+	}
+	// h2{
+	// 	font-size:2.4rem;
+	// 	line-height: 2.8rem;
+	// }
+	.introText{
+		// p{
+		// 	font-size:1.8rem;
+		// }
+		&:before{
+			top:3%;
+		}
+	}
+	.userInput{
+		.inputReasonLine{
+			label{
+				left:50%;
+			}
+		}
+	}
+	fieldset .wrapper ul li{
+		height:90px;
+	}
+	button, input[type=submit]{
+		// font-size:1.5rem;
+		letter-spacing:1px;
+		padding:15px 30px;
+	}
+}
+
+@media all and (max-width:$outputMobile){
+	header{
+		h1{
+			font-size:10rem;
+			// line-height: 10rem;
+		}
+		h2{
+			font-size:2.5rem;
+			line-height: 2.6rem;
+		}
+		blockquote{
+			font-size:2.4rem;
+		}
+		img{
+			width:450px;
+		}
+	}
+
+	p {
+		font-size: 2rem;
+	}
+
+
+	.largeRed{
+		font-size:3rem;
+	}
+	
+	label{
+		font-size:2rem;
+	}
+
+	h2{
+		font-size:3rem;
+		line-height:3.4rem;
+		margin-bottom:20px;
+	}
+
+	fieldset .wrapper ul{
+		width:90%;
+		li{
+		flex:1 1 100%;
+		}
+	}
+	.userInput{
+		padding:0;
+		.inputReasonLine{
+			p{
+				display:block;
+				margin-bottom:-5px;
+			}
+			label{
+				height:auto;
+			}
+		}
+
+		input[type=text] {
+			font-size: 2rem;
+			width: 300px;
+			text-align: center;
+		}
+		.inputNameLine, .inputYourNameLine{
+			p{
+				display:block;
+				margin-bottom:-5px;
+			}
+			label{
+				height:auto;
+				left:50%;
+				width:100%;
+			}
+		}
+	}
+	.wrapper{
+		width:98%;
+		margin:1% auto;
+	}
+	.downButton a{
+		padding:10% 0;
+		margin-top:10px;
+	}
+	footer{
+		left:-55px;
+	}
+
+}
+@media all and (max-width:$smartphone){
+	header{
+		h1{
+			font-size:7.8rem;
+			line-height: 7.8rem;
+		}
+		h2{
+			font-size:2.2rem;
+			line-height: 2.4rem;
+		}
+		img{
+			width:300px;
+		}
+	}
+
+	p {
+		font-size: 1.8rem;
+	}
+
+	h2 {
+		font-size: 2.6rem;
+		line-height: 3rem;
+	}
+
+	.introText {
+		width: 90%;
+	}
+	
+	label{
+		font-size:1.8rem;
+	}
+.userInput {
+	input[type=text] {
+			font-size: 1.8rem;
+			width: 250px;
+			text-align: center;
+		}
+
+	.inputNameLine {
+		margin-top: 10px;
+	}
+	}
+}
+
+@media all and (max-width:$stupidphone){
+	header{
+		h1{
+			font-size:6.5rem;
+			line-height: 6.5rem;
+		}
+		h2{
+			font-size:2rem;
+			line-height: 2.2rem;
+		}
+		img{
+			width:300px;
+		}
+	}
+		label{
+		font-size:1.6rem;
+		line-height: 2rem;
+	}
+}

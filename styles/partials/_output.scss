@@ -1,0 +1,178 @@
+.output{
+	position:relative;
+	padding:5% 0;
+	height:80vh;
+	max-height:650px;
+	min-height: 500px; //added Min height so it didn't collapse
+	background-color:$darkblue;
+	background-image:url(../assets/dtrump_point.png);
+	background-repeat:no-repeat;
+	background-position:18% 100%; // this is x and y coords, currently 20% from the left and sitting at the bottom
+	background-size:300px; //this changes the size of our friend
+	.outputMessage{
+		@include fontStyle($bodyfont,2rem,400,white,1px);
+		background:$lightblue;
+		width:500px;
+		margin:0 auto;
+		text-align:left;
+		padding:25px;
+		border-radius:25px;
+		//tried to use absolute pos to make this work
+		position:relative; //change this to absolute if you wanna move it somewhere
+		// left:35%;
+		&:before{
+			  content:"";
+			  position:absolute;
+			  width: 0; 
+			  height: 0; 
+			  border-left: 0 solid transparent;
+			  border-right: 40px solid transparent; 
+			  border-top: 30px solid $lightblue;
+			  bottom:-28px;
+			  left:50px;
+		}
+	}
+	&:before {
+	content:"\f005" "\f005" "\f005" "\f005" "\f005";
+	font-family: 'FontAwesome';
+	letter-spacing: 2rem;
+	position: absolute;
+	margin: 5px;
+	font-size: 2rem;
+	top: 8%;
+	left: 50%;
+	color: $red;
+	transform: translate(-50%, 0);
+	}
+}
+
+.links {
+	width: 100%;
+}
+
+ul.social{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content: center;
+	align-items: center;
+	margin:0 auto;
+	width:65%;
+	height: 20vh; // added height so buttons sit centred
+	li {
+		// flex:1 1 32%;
+		margin:10px auto;
+		width:200px; //made buttons fixed height so the "start over" text didn't stack (made the button look weird)
+	}
+	a{
+		border: none;
+		background: $lightblue;
+		border-radius: 20px;
+		padding: 15px 30px;
+		text-decoration:none;
+		@include fontStyle($bodyfont, 2rem, 700, white,1px);
+		text-transform: uppercase;
+		transition:0.3s all ease;
+		&:hover{
+			background:$red;
+		}
+	}
+}
+
+
+
+@media all and (max-width:$desktop){
+		.output{
+		background-position:10% 100%; // this is x and y coords, currently 20% from the left and sitting at the bottom
+		background-size:275px; //this changes the size of our friend
+		.outputMessage{
+			width:450px;
+		}
+		&:before {
+			top:5%;
+		}
+	}
+}
+@media all and (max-width:$tabletLandscape){
+	.output{
+		background-size:250px;
+		.outputMessage{
+			width:400px;
+		}
+	}
+}
+.links {
+	width: 100%; // added a width to links to make the buttons move responsively
+	margin: 0 auto;
+}
+
+
+ul.social{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content: center;
+	align-items: center;
+	margin:0 auto;
+	width:80%;
+	height: 20vh; // added height so buttons sit centred
+	li {
+		// flex:1 1 32%;
+		margin:10px auto;
+		width:200px;
+	}
+}
+
+@media all and (max-width:$tabletPortrait){
+		.output{
+			background-position:5% 100%; // this is x and y coords, currently 20% from the left and sitting at the bottom
+			background-size:250px; //this changes the size of our friend
+			.outputMessage{
+				width:350px;
+			}
+			&:before {
+				top:5%;
+		}
+
+	.links {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+		ul.social{
+				width: 90%;
+
+			}
+	}
+}
+@media all and (max-width:$outputMobile){
+		.output{
+			background-image:url(../assets/dtrump_point_mobile.png);
+			background-position:50% 100%; // this is x and y coords, currently 20% from the left and sitting at the bottom
+			background-size:300px; //this changes the size of our friend
+			min-height: auto;
+			height: 80vh;
+			.outputMessage{
+				width:300px;
+				font-size:1.8rem;
+				margin-top: 30px;
+			}
+			&:before {
+				top:4%;
+			}
+
+			.links {
+				width: 100%;
+			}
+
+			ul.social{
+				width: 100%;
+				flex-wrap:wrap;
+				}
+
+				h2 {
+					margin-top: 40px;
+				}
+			}
+		}
+	
